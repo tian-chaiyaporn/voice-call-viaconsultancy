@@ -2,5 +2,8 @@
 # platform :ios, '9.0'
 
 target 'VoiceCall' do
+  pod 'React', :path => '../node_modules/react-native'
+  pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
   pod "react-native-agora", :path => '../node_modules/react-native-agora'
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
 end
