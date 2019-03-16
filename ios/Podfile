@@ -1,0 +1,6 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'VoiceCall' do
+  pod "react-native-agora", :path => '../node_modules/react-native-agora'
+end
