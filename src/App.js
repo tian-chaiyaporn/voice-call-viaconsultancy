@@ -1,12 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- * @lint-ignore-every XPLATJSCOPYRIGHT1
- */
-
 import React, {Component} from 'react';
 import {NativeModules, Platform, StyleSheet, Text, View} from 'react-native';
 import {RtcEngine, AgoraView} from 'react-native-agora';
@@ -26,7 +17,6 @@ export default class App extends Component<Props> {
   render() {
     console.log('Agora from Native Module', Agora)
     console.log('RtcEngine', RtcEngine)
-    console.log('AgoraView', AgoraView)
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to React Native!</Text>
