@@ -1,10 +1,14 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, Button } from 'react-native'
 
-function LogIn() {
+function LogIn(props) {
+  const { navigate } = props.navigation
   return (
     <View>
-      <Text>hello text</Text>
+      <Button
+        title={'Log In'}
+        onPress={() => navigate('Phone')}
+      />
     </View>
   )
 }

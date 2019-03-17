@@ -4,7 +4,12 @@ import Phone from './screens/Phone'
 
 const MainNavigator = createStackNavigator({
   LogIn: { screen: LogIn },
-  Phone: { screen: Phone },
+  Phone: {
+    screen: Phone,
+    navigationOptions: () => ({
+     header: null
+    }) 
+  },
 });
 
 const App = createAppContainer(MainNavigator);
