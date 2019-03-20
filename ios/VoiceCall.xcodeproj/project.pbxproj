@@ -23,7 +23,6 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		64012D82223D87A00025B4FE /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64012D7F223D86830025B4FE /* libRNGestureHandler.a */; };
 		64012D85223DFD1D0025B4FE /* libdouble-conversion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF0FFE72056DD460020B375 /* libdouble-conversion.a */; };
 		64EA5546223D033100B7E946 /* AgoraRtcEngineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EA5545223D033100B7E946 /* AgoraRtcEngineKit.framework */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -249,11 +248,11 @@
 			remoteGlobalIDString = 2D2A28201D9B03D100D4039D;
 			remoteInfo = "RCTAnimation-tvOS";
 		};
-		64012D7E223D86830025B4FE /* PBXContainerItemProxy */ = {
+		64023F7A224295BF009E9806 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 64012D7A223D86830025B4FE /* RNGestureHandler.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteGlobalIDString = 64023F52223E5919009E9806;
 			remoteInfo = RNGestureHandler;
 		};
 		64C4489F2239619B00FE41A4 /* PBXContainerItemProxy */ = {
@@ -373,7 +372,6 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				64012D85223DFD1D0025B4FE /* libdouble-conversion.a in Frameworks */,
-				64012D82223D87A00025B4FE /* libRNGestureHandler.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,7 +516,7 @@
 		64012D7B223D86830025B4FE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				64012D7F223D86830025B4FE /* libRNGestureHandler.a */,
+				64023F7B224295BF009E9806 /* libRNGestureHandler.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -671,6 +669,7 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = XP9X628JKP;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
@@ -966,11 +965,11 @@
 			remoteRef = 5E9157341DD0AC6500FF2AA8 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		64012D7F223D86830025B4FE /* libRNGestureHandler.a */ = {
+		64023F7B224295BF009E9806 /* libRNGestureHandler.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libRNGestureHandler.a;
-			remoteRef = 64012D7E223D86830025B4FE /* PBXContainerItemProxy */;
+			remoteRef = 64023F7A224295BF009E9806 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		64C448A02239619B00FE41A4 /* libjsi.a */ = {
@@ -1134,6 +1133,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = XP9X628JKP;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/VoiceCall/AgoraRtcEngineKit.framework",
@@ -1169,6 +1169,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = XP9X628JKP;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/VoiceCall/AgoraRtcEngineKit.framework",
@@ -1222,7 +1223,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chaiyaporn.voicecall;
 				PRODUCT_NAME = VoiceCall;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1254,7 +1255,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chaiyaporn.voicecall;
 				PRODUCT_NAME = VoiceCall;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
