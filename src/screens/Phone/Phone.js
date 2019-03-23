@@ -1,18 +1,35 @@
 import React from 'react'
-import { View, Text, NativeModules, SafeAreaView } from 'react-native'
-// import { RtcEngine, AgoraView } from 'react-native-agora';
+import {
+  View,
+  Text,
+  NativeModules,
+  SafeAreaView,
+  Button
+} from 'react-native'
+// import { RtcEngine, AgoraView } from 'react-native-agora'
+import { connect } from 'react-redux'
+import { logout } from '../LogIn/LogInActions'
 
 // const { Agora } = NativeModules
 
-function Phone() {
+function Phone(props) {
+  const { navigate } = props.navigation
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View>
         <Text>Hello Phone</Text>
       </View>
+      <Button
+        title={'Log Out'}
+        onPress={() => {
+          props.logout()
+          navigate('LogIn')
+        }}
+      />
     </SafeAreaView>
   )
 }
 
-export default Phone
+export default connect(null, { logout })(Phone)
 

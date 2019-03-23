@@ -1,23 +1,34 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { View, Text, Button } from 'react-native'
 import { connect } from 'react-redux'
 import { logIn } from './LogInActions'
 
 function LogIn(props) {
   const { navigate } = props.navigation
+
+  useEffect(() => {
+    console.log('prop changed')
+    if (props.isLoggedIn === true) {
+      navigate('Phone')
+    }
+  }, [props.isLoggedIn])
+
   return (
     <View>
       <Button
         title={'Log In'}
-        onPress={() => navigate('Phone')}
+        onPress={() => props.logIn('email', 'password')}
       />
+      { props.logInIsRequesting ? <Text>please wait</Text> : null }
     </View>
   )
 }
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
+  console.log('state', state)
   return {
-    active: ownProps.filter === state.visibilityFilter
+    logInIsRequesting: state.logInIsRequesting,
+    isLoggedIn: state.isLoggedIn
   }
 }
 
