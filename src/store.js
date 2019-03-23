@@ -1,8 +1,9 @@
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
+import logInReducer from './screens/LogIn/LogInReducer'
 
-const rootReducer = (state = {}, action) => {
-  return state
-}
-
-export default store = createStore(rootReducer)
+export default store = createStore(
+  logInReducer,
+  applyMiddleware(thunk)
+)
 
