@@ -6,15 +6,15 @@ import {
   SafeAreaView,
   Button
 } from 'react-native'
-// import { RtcEngine, AgoraView } from 'react-native-agora'
+import { RtcEngine, AgoraView } from 'react-native-agora'
 import { connect } from 'react-redux'
 import { logout } from '../LogIn/LogInActions'
 
-// const { Agora } = NativeModules
+const { Agora } = NativeModules
 
 function Phone(props) {
   const { navigate } = props.navigation
-
+  console.log('test agora integration', Agora)
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View>

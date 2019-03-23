@@ -13,12 +13,13 @@ function LogIn(props) {
   }, [props.isLoggedIn])
 
   return (
-    <View>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#aaaaFF' }}>
       <Button
         title={'Log In'}
+        color={'white'}
         onPress={() => props.logIn('email', 'password')}
+        disabled={props.logInIsRequesting}
       />
-      { props.logInIsRequesting ? <Text>please wait</Text> : null }
     </View>
   )
 }
