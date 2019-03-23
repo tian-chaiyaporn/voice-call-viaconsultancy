@@ -7,7 +7,6 @@ function LogIn(props) {
   const { navigate } = props.navigation
 
   useEffect(() => {
-    console.log('prop changed')
     if (props.isLoggedIn === true) {
       navigate('Phone')
     }
@@ -25,7 +24,6 @@ function LogIn(props) {
 }
 
 const mapStateToProps = (state) => {
-  console.log('state', state)
   return {
     logInIsRequesting: state.logInIsRequesting,
     isLoggedIn: state.isLoggedIn
