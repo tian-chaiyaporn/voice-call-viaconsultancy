@@ -6,7 +6,7 @@ import {
   SafeAreaView,
   Button
 } from 'react-native'
-import { RtcEngine, AgoraView } from 'react-native-agora'
+// import { RtcEngine, AgoraView } from 'react-native-agora'
 import { connect } from 'react-redux'
 import { logout } from '../LogIn/LogInActions'
 

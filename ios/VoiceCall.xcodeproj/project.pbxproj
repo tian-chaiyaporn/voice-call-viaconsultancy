@@ -23,8 +23,9 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		15AAFB6AD91B26F390D6D16D /* libPods-VoiceCall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3EFCCD747B64E869662B43B /* libPods-VoiceCall.a */; };
 		64012D85223DFD1D0025B4FE /* libdouble-conversion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF0FFE72056DD460020B375 /* libdouble-conversion.a */; };
-		64EA5546223D033100B7E946 /* AgoraRtcEngineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EA5545223D033100B7E946 /* AgoraRtcEngineKit.framework */; };
+		64023FC32246AEF0009E9806 /* libRCTAgora.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EA5532223D029C00B7E946 /* libRCTAgora.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
@@ -335,7 +336,6 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		64012D7A223D86830025B4FE /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
 		64012D83223DFD140025B4FE /* libDoubleConversion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libDoubleConversion.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		64EA5545223D033100B7E946 /* AgoraRtcEngineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AgoraRtcEngineKit.framework; path = Pods/AgoraRtcEngine_iOS/AgoraRtcEngineKit.framework; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7FF228CBBC97D2D09D8596EE /* Pods-VoiceCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceCall.release.xcconfig"; path = "Target Support Files/Pods-VoiceCall/Pods-VoiceCall.release.xcconfig"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -343,6 +343,7 @@
 		B8C1BB39CCAE4685B362DAE4 /* RCTAgora.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTAgora.xcodeproj; path = "../node_modules/react-native-agora/ios/RCTAgora.xcodeproj"; sourceTree = "<group>"; };
 		EB40E4D8D2AA8FE12CF7510D /* Pods-VoiceCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceCall.debug.xcconfig"; path = "Target Support Files/Pods-VoiceCall/Pods-VoiceCall.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F3EFCCD747B64E869662B43B /* libPods-VoiceCall.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VoiceCall.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -358,8 +359,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64023FC32246AEF0009E9806 /* libRCTAgora.a in Frameworks */,
 				ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */,
-				64EA5546223D033100B7E946 /* AgoraRtcEngineKit.framework in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -373,6 +374,7 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				64012D85223DFD1D0025B4FE /* libdouble-conversion.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				15AAFB6AD91B26F390D6D16D /* libPods-VoiceCall.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,8 +500,8 @@
 			isa = PBXGroup;
 			children = (
 				64012D83223DFD140025B4FE /* libDoubleConversion.a */,
-				64EA5545223D033100B7E946 /* AgoraRtcEngineKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				F3EFCCD747B64E869662B43B /* libPods-VoiceCall.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1134,17 +1136,13 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = XP9X628JKP;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/VoiceCall/AgoraRtcEngineKit.framework",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/VoiceCall/AgoraRtcEngineKit.framework",
 					"$(SRCROOT)/../node_modules/react-native-agora/ios/RCTAgora",
 				);
 				INFOPLIST_FILE = VoiceCallTests/Info.plist;
@@ -1170,13 +1168,9 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = XP9X628JKP;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/VoiceCall/AgoraRtcEngineKit.framework",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/VoiceCall/AgoraRtcEngineKit.framework",
 					"$(SRCROOT)/../node_modules/react-native-agora/ios/RCTAgora",
 				);
 				INFOPLIST_FILE = VoiceCallTests/Info.plist;
@@ -1207,12 +1201,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VoiceCall",
-					"$(SRCROOT)/VoiceCall/AgoraRtcEngineKit.framework",
-					"$(PROJECT_DIR)/Pods/AgoraRtcEngine_iOS",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/VoiceCall/AgoraRtcEngineKit.framework",
 					"$(SRCROOT)/../node_modules/react-native-agora/ios/RCTAgora",
 				);
 				INFOPLIST_FILE = VoiceCall/Info.plist;
@@ -1239,12 +1230,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VoiceCall",
-					"$(SRCROOT)/VoiceCall/AgoraRtcEngineKit.framework",
-					"$(PROJECT_DIR)/Pods/AgoraRtcEngine_iOS",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/VoiceCall/AgoraRtcEngineKit.framework",
 					"$(SRCROOT)/../node_modules/react-native-agora/ios/RCTAgora",
 				);
 				INFOPLIST_FILE = VoiceCall/Info.plist;
