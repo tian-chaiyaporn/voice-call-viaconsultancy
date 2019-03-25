@@ -13,6 +13,8 @@ import { logout } from '../LogIn/LogInActions'
 
 const { Agora } = NativeModules
 const { AudioProfileDefault } = Agora
+const CHANNEL_NAME = 'ViaConsultancyVoiceCall'
+const UID = Date.now() + Math.floor(Math.random())
 
 function Phone(props) {
   const { navigate } = props.navigation
@@ -20,7 +22,7 @@ function Phone(props) {
   useEffect(() => {
     const config = { appid: '', audioProfile: AudioProfileDefault }
     RtcEngine.on('joinChannelSuccess', (data) => {
-      RtcEngine.startPreview()
+      Alert.alert('You have joined this conversation successfully')
     })
 
     RtcEngine.on('userJoined', (data) => {
@@ -36,13 +38,11 @@ function Phone(props) {
   }, [])
 
   const joinChannel = () => {
-    // const { channelName, uid } = props
-    // RtcEngine.joinChannel(channelName, uid);
+    RtcEngine.joinChannel(CHANNEL_NAME, UID)
   }
 
   const leaveChannel = () => {
-    console.log('leave channel')
-    // RtcEngine.leaveChannel()
+    RtcEngine.leaveChannel()
   }
 
   return (
