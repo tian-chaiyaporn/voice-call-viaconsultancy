@@ -15,7 +15,7 @@ export const logIn = (email, password) => async (dispatch) => {
   dispatch(requestingLogIn())
   try {
     const logInResult = await axios.post(
-      'http://localhost:3000/log-in',
+      'http://192.168.1.40:3001/log-in',
       { email, password },
       { headers: { 'Content-Type': 'application/json' } }
     )

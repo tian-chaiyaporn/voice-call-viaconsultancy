@@ -12,7 +12,9 @@ import { connect } from 'react-redux'
 import { logout } from '../LogIn/LogInActions'
 
 const { Agora } = NativeModules
-const { AudioProfileDefault } = Agora
+const { Host, AudioProfileDefault, AudioScenarioDefault } = Agora
+
+const APP_ID = '506b566c536b433897e311465d0d0b98'
 const CHANNEL_NAME = 'ViaConsultancyVoiceCall'
 const UID = Date.now() + Math.floor(Math.random())
 
@@ -20,29 +22,57 @@ function Phone(props) {
   const { navigate } = props.navigation
 
   useEffect(() => {
-    const config = { appid: '', audioProfile: AudioProfileDefault }
-    RtcEngine.on('joinChannelSuccess', (data) => {
-      Alert.alert('You have joined this conversation successfully')
+    const config = {
+      appid: APP_ID,
+      audioProfile: AudioProfileDefault,
+      channelProfile: 1,
+      audioScenario: AudioScenarioDefault,
+      clientRole: Host
+    }
+
+    RtcEngine.on('joinChannelSuccess', async (data) => {
+      console.log('join channel success')
+      try {
+        console.log(RtcEngine.enableLocalAudio)
+        const enableAudio = await Agora.enableLocalAudio(true)
+        console.log('enable local audio success', enableAudio)
+        Alert.alert('You have joined this conversation successfully')
+      } catch(e) {
+        console.log('fails', e)
+      }
     })
 
     RtcEngine.on('userJoined', (data) => {
+      console.log('user has joinged channel')
       Alert.alert('Someone has joined this conversation')
     })
 
-    RtcEngine.init(config)
+    RtcEngine.on('userOffline', (data) => {
+      console.log('[RtcEngine] onUserOffline', data);
+    })
 
+    RtcEngine.init(config)
+    RtcEngine.enableAudio()
     return () => {
+      RtcEngine.disableAudio()
       RtcEngine.removeAllListeners()
       RtcEngine.destroy()
     }
   }, [])
 
   const joinChannel = () => {
-    RtcEngine.joinChannel(CHANNEL_NAME, UID)
+    console.log('join channel', RtcEngine)
+    console.log('channel name', CHANNEL_NAME)
+    console.log('UID', UID)
+    return RtcEngine.joinChannel(CHANNEL_NAME, UID, '', '')
   }
 
   const leaveChannel = () => {
-    RtcEngine.leaveChannel()
+    console.log('leave channel', RtcEngine)
+    return RtcEngine.leaveChannel()
+      .then(data => RtcEngine.enableLocalAudio(false))
+      .then(() => Alert.alert('You have left this conversation successfully'))
+      .catch(error => console.log('error', error, RtcEngine))
   }
 
   return (
