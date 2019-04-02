@@ -37,8 +37,6 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>VoiceCallViaConsultancy wants to use for voice calling between the apps</string>
 	<key>UIBackgroundModes</key>

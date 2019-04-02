@@ -2,20 +2,20 @@
 # platform :ios, '9.0'
 
 target 'VoiceCall' do
-  pod 'React', :path => '../node_modules/react-native', :subspecs => [
-    'Core',
-    'CxxBridge',
-    'RCTText',
-    'RCTNetwork',
-    'RCTWebSocket',
-    'RCTImage',
-    'RCTNetwork',
-    'DevSupport'
-  ]
+  pod 'React', :path => '../node_modules/react-native' 
   pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
-  pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
-  pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
-  pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+  # pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+  # pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
+  # pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
   pod "react-native-agora", :path => '../node_modules/react-native-agora'
   pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    targets_to_ignore = %w(React yoga)
+    if targets_to_ignore.include? target.name
+      target.remove_from_project
+    end
+  end
 end
