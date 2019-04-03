@@ -24,6 +24,8 @@ project.xcworkspace
 
 ios/
 Pods
+VoiceCall/AgoraAudioKit.framework
+VoiceCall/AgoraRtcEngineKit.framework
 
 # Android/IntelliJ
 #

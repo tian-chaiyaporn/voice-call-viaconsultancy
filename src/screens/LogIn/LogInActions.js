@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { IP_ADDRESS } from '../../constants/constants'
 
 export const LOG_IN_REQUESTING = 'LOG_IN_REQUESTING'
 export const LOG_IN_SUCCEED = 'LOG_IN_SUCCEED'
@@ -15,7 +16,7 @@ export const logIn = (email, password) => async (dispatch) => {
   dispatch(requestingLogIn())
   try {
     const logInResult = await axios.post(
-      'http://192.168.1.40:3001/log-in',
+      `http://${IP_ADDRESS}:3001/log-in`,
       { email, password },
       { headers: { 'Content-Type': 'application/json' } }
     )
